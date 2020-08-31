@@ -4,11 +4,10 @@ import { TitleSlide } from '../../modules'
 const slide = () => (
   <TitleSlide>
     <h1>{slide.title}</h1>
-    <h2><i className='fa fa-github' /> <a href='https://github.com/bvaughn/react-presents'>github.com/bvaughn/react-presents</a></h2>
-    <p>(Use the right and left arrow keys to navigate)</p>
+    <h2><i className='fa fa-github' /> <a href='https://github.com/lucas-cunico/react-presents'>github.com/lucas-cunico/react-presents</a></h2>
   </TitleSlide>
 )
 
-slide.title = 'React Presents: a slideshow framework'
+slide.title = 'Javascript - tips and tricks'
 
 export default slide

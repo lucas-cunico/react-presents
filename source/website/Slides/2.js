@@ -1,35 +1,31 @@
 import React from 'react'
-import { Code, ContentSlide, Step } from '../../modules'
+import { ContentSlide, Step } from '../../modules'
 
-const code = require('raw!../../../examples/render-function.js')
-const dimLines = {
-  3: [[0, 1], [5, 6]]
-}
-const highlightLines = {
-  4: [[0, 0], [2, 2]]
-}
-
-const slide = ({ stepIndex }) => (
+const slide = () => (
   <ContentSlide>
     <h1>{slide.title}</h1>
-    <p>Slides can also contain syntax highlighting:</p>
-    <Step index={1}>
-      <Code
-        dimLines={dimLines[stepIndex]}
-        highlightLines={highlightLines[stepIndex]}
-        value={code}
-      />
-    </Step>
-    <Step index={2}>
-      <p>This is handled by <code>CodeMirror</code> but with a few convenience features:</p>
-    </Step>
     <ul>
-      <Step index={3}><li>Such as dimming specified lines:</li></Step>
-      <Step index={4}><li>Or highlighting them:</li></Step>
+      <li><strong>ES6 - ECMAScript 2015</strong>
+        <p> <code>import * as moduleName from "..."; export const Foo</code> </p>
+        <p> <code>{`class Foo { ... }`}</code></p>
+        <p> <code>{`() => {...}`}</code></p>
+        <p> <code>{`new Promise()`}</code></p>
+      </li>
+      <Step index={1}> <li><strong>ES7 -ECMAScript 2016</strong>
+        <p> <code>{`await`}</code></p>
+        <p> <code>{`async`}</code></p>
+      </li></Step>
+      <Step index={2}><li><strong>ES8 - ECMAScript 2017</strong>
+        <p> <code>{`Object.values`}</code></p>
+        <p> <code>{`Object.entries`}</code></p>
+        <p> <code>{`Object.getOwnPropertyDescriptors`}</code></p>
+      </li></Step>
+      <Step index={3}><li><strong>ES11 - ECMAScript 2020</strong>
+      </li></Step>
     </ul>
   </ContentSlide>
 )
 
-slide.title = 'Syntax highlighting'
+slide.title = 'Marco histórico'
 
 export default slide
